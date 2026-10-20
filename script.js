@@ -74,18 +74,22 @@ const wordBank = [
 
 // Choose random words without repeating any in the same set
 function getRandomWords(amount) {
-  const shuffled = [...wordBank];
+  let suggestions = [];
 
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[randomIndex]] =
-      [shuffled[randomIndex], shuffled[i]];
+  while (suggestions.length < amount) {
+    let randomIndex = Math.floor(Math.random() * wordBank.length);
+    let randomWord = wordBank[randomIndex];
+
+    // Make sure the same word doesn't appear twice in one set
+    if (!suggestions.includes(randomWord)) {
+      suggestions.push(randomWord);
+    }
   }
 
-  return shuffled.slice(0, amount);
+  return suggestions;
 }
 
-// Show 8 random suggestions
+// Show random suggestions
 function showSuggestions() {
   const words = getRandomWords(8);
   suggestionsBox.innerHTML = "";
