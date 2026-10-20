@@ -1,119 +1,130 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: #f3f0e8;
-    color: #202020;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f0e8;
+  color: #222;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-    width: 90%;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 45px 0;
-}
-
-.small-title {
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 h1 {
-    font-size: 38px;
-    margin: 0 0 15px 0;
-    font-weight: normal;
+  font-family: Georgia, serif;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 .instructions {
-    font-size: 17px;
-    line-height: 1.5;
-    max-width: 520px;
-    margin-bottom: 40px;
+  line-height: 1.5;
+  color: #555;
 }
 
-.story-box {
-    background: white;
-    border: 1px solid #202020;
-    min-height: 220px;
-    padding: 25px;
-    margin-bottom: 30px;
+.story {
+  background: white;
+  border: 1px solid #222;
+  min-height: 180px;
+  padding: 25px;
+  margin: 30px 0 20px;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 
-#story {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.input-area label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.input-row {
-    display: flex;
-    gap: 8px;
+form {
+  display: flex;
+  gap: 10px;
 }
 
 input {
-    flex: 1;
-    min-width: 0;
-    padding: 14px;
-    font-size: 17px;
-    border: 1px solid #202020;
-    background: white;
+  flex: 1;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #222;
+  border-radius: 4px;
 }
 
 button {
-    padding: 14px 20px;
-    font-size: 15px;
-    border: 1px solid #202020;
-    background: #202020;
-    color: white;
-    cursor: pointer;
+  padding: 14px 20px;
+  border: 1px solid #222;
+  background: #222;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-#message {
-    min-height: 22px;
-    font-size: 14px;
-    margin-top: 10px;
+.message {
+  min-height: 22px;
+  color: #555;
 }
 
-.reset-button {
-    margin-top: 25px;
-    background: transparent;
-    color: #202020;
-    font-size: 13px;
+.suggestions-area {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #bbb;
 }
 
-@media (max-width: 500px) {
-    .container {
-        padding: 30px 0;
-    }
+.suggestions-area h2 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
 
-    h1 {
-        font-size: 30px;
-    }
+#shakeMessage {
+  color: #666;
+  font-size: 0.9rem;
+}
 
-    #story {
-        font-size: 22px;
-    }
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 45px;
+}
 
-    .input-row {
-        flex-direction: column;
-    }
+.suggestion {
+  background: white;
+  color: #222;
+  border: 1px solid #222;
+  padding: 9px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-    button {
-        width: 100%;
-    }
+.suggestion:hover {
+  background: #e7e1d6;
+}
+
+.reset {
+  margin-top: 30px;
+  background: transparent;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 0;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .story {
+    font-size: 1.25rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
 }

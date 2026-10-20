@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Story by Strangers</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Story by Strangers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="container">
+    <h1>A Story by Strangers</h1>
 
-    <main class="container">
-        <p class="small-title">A STORY BY STRANGERS</p>
+    <p class="instructions">
+      Read the story so far, then add ONE word.<br>
+      Shake your phone to get word suggestions.
+    </p>
 
-        <h1>One word at a time.</h1>
+    <section id="story" class="story">Once</section>
 
-        <p class="instructions">
-            Read the story so far, then add one word.
-        </p>
+    <form id="storyForm">
+      <input
+        id="wordInput"
+        type="text"
+        placeholder="Add one word..."
+        autocomplete="off"
+      >
+      <button type="submit">ADD</button>
+    </form>
 
-        <section class="story-box">
-            <p id="story">Once</p>
-        </section>
+    <p id="message" class="message"></p>
 
-        <section class="input-area">
-            <label for="wordInput">Add one word</label>
+    <section class="suggestions-area">
+      <h2>Word suggestions</h2>
+      <p id="shakeMessage">Shake your phone to get ideas.</p>
+      <div id="suggestions" class="suggestions"></div>
+    </section>
 
-            <div class="input-row">
-                <input
-                    type="text"
-                    id="wordInput"
-                    placeholder="your word"
-                    autocomplete="off"
-                    maxlength="30"
-                >
-                <button id="addButton">ADD</button>
-            </div>
+    <button id="resetButton" class="reset">Start a new story</button>
+  </main>
 
-            <p id="message"></p>
-        </section>
-
-        <button id="resetButton" class="reset-button">
-            Start a new story
-        </button>
-    </main>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
